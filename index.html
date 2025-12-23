@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe — 2 Players or vs AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Tic‑Tac‑Toe</h1>
+
+    <div class="controls">
+      <label for="mode">Mode:</label>
+      <select id="mode">
+        <option value="human">2 Players (Local)</option>
+        <option value="ai">1 Player (You vs AI)</option>
+      </select>
+
+      <label for="youAre" id="youLabel" style="display:none">You are:</label>
+      <select id="youAre" style="display:none">
+        <option value="X">X (first)</option>
+        <option value="O">O (second)</option>
+      </select>
+
+      <label for="difficulty" id="diffLabel" style="display:none">AI level:</label>
+      <select id="difficulty" style="display:none">
+        <option value="unbeatable">Unbeatable</option>
+        <option value="easy">Easy</option>
+      </select>
+
+      <button id="reset">Restart</button>
+    </div>
+
+    <section class="board" id="board" aria-label="Tic tac toe board" role="grid"></section>
+
+    <div class="status" id="status">Turn: <span id="turn">X</span></div>
+
+    <div class="scoreboard">
+      <div>X wins: <span id="xWins">0</span></div>
+      <div>O wins: <span id="oWins">0</span></div>
+      <div>Draws: <span id="draws">0</span></div>
+    </div>
+
+    <footer>
+      <small>Built with HTML, CSS & JavaScript — supports 2-player local and 1-player vs AI (Minimax / random).</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
